@@ -2,89 +2,96 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Responsive University</title>
-
+    <title>Class Timetable</title>
     <style>
-        body {
-            margin: 0;
-            font-family: Arial;
+        body { font-family: Arial; background: #f2f2f2; }
+        h1, h2 { text-align: center; color: navy; }
+        table {
+            margin: auto;
+            border-collapse: collapse;
+            width: 80%;
+            background: white;
         }
-
-        header, footer {
-            background: navy;
-            color: white;
+        th, td {
+            border: 1px solid black;
+            padding: 12px;
             text-align: center;
-            padding: 20px;
         }
-
-        nav {
-            background: black;
-            padding: 15px;
-        }
-
-        nav a {
-            color: white;
-            margin: 15px;
-            text-decoration: none;
-        }
-
-        .container {
-            display: flex;
-        }
-
-        main {
-            flex: 3;
-            padding: 20px;
-        }
-
-        aside {
-            flex: 1;
-            background: lightblue;
-            padding: 20px;
-        }
-
-        @media(max-width:600px) {
-            .container {
-                flex-direction: column;
-            }
-        }
+        th { background: lightblue; }
+        caption { font-size: 20px; padding: 10px; }
     </style>
 </head>
-
 <body>
 
-<header>
-    <h1>ABC University</h1>
-</header>
+<h1>ABC University</h1>
+<h2>Third Year IT - Class Timetable</h2>
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#">Courses</a>
-    <a href="#">Facilities</a>
-</nav>
+<table>
+    <caption><b>Weekly Timetable</b></caption>
 
-<div class="container">
+    <tr>
+        <th>Day</th>
+        <th>9-10</th>
+        <th>10-11</th>
+        <th>11-12</th>
+        <th>12-1</th>
+    </tr>
 
-    <main>
-        <h2>Welcome to University</h2>
-        <p>Our university provides quality education and modern facilities.</p>
-    </main>
+    <tr>
+        <th>Monday</th>
+        <td>Java</td>
+        <td>DBMS</td>
+        <td colspan="2">Java Lab</td>
+    </tr>
 
-    <aside>
-        <h3>Facilities</h3>
-        <ul>
-            <li>Library</li>
-            <li>Computer Lab</li>
-            <li>Auditorium</li>
-            <li>Sports Ground</li>
-        </ul>
-    </aside>
+    <tr>
+        <th>Tuesday</th>
+        <td>Python</td>
+        <td>OS</td>
+        <td>CN</td>
+        <td rowspan="2">Library</td>
+    </tr>
 
-</div>
+    <tr>
+        <th>Wednesday</th>
+        <td>DBMS</td>
+        <td colspan="2">Python Lab</td>
+    </tr>
 
-<footer>
-    <p>Copyright 2026 ABC University</p>
-</footer>
+    <tr>
+        <th>Thursday</th>
+        <td>CN</td>
+        <td>Java</td>
+        <td>OS</td>
+        <td>DBMS</td>
+    </tr>
+
+</table>
+
+<h2>University Infrastructure</h2>
+
+<table>
+    <tr>
+        <th>Facility</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Library</td>
+        <td>Books and Digital Resources</td>
+    </tr>
+    <tr>
+        <td>Computer Lab</td>
+        <td>Modern Computer Systems</td>
+    </tr>
+    <tr>
+        <td>Auditorium</td>
+        <td>Seminars and Events</td>
+    </tr>
+    <tr>
+        <td>Sports Ground</td>
+        <td>Indoor and Outdoor Games</td>
+    </tr>
+</table>
 
 </body>
 </html>
